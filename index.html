@@ -1,0 +1,1886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="NeonCalc Pro - Advanced All-in-One Calculator with EMI, Age, GST, BMI, Currency, Unit, Voice and Food Cost Calculator."
+    >
+
+    <meta
+        name="theme-color"
+        content="#080b14"
+    >
+
+    <title>NeonCalc Pro | Advanced All-in-One Calculator</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- =========================================
+         HEADER
+    ========================================== -->
+
+    <header class="site-header">
+
+        <div class="container header-inner">
+
+            <a href="#" class="logo">
+                <span class="logo-icon">⚡</span>
+                <span>NeonCalc Pro</span>
+            </a>
+
+            <button
+                id="themeToggle"
+                class="theme-btn theme-toggle"
+                type="button"
+                aria-label="Switch to light mode"
+            >
+                🌙
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================
+         HERO
+    ========================================== -->
+
+    <main>
+
+        <section class="hero">
+
+            <div class="container">
+
+                <span class="hero-badge">
+                    ⚡ Advanced Calculator Suite
+                </span>
+
+                <h1>
+                    NeonCalc Pro
+                </h1>
+
+                <p>
+                    One powerful calculator for all your
+                    everyday calculations.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             BASIC + SCIENTIFIC CALCULATOR
+        ====================================== -->
+
+        <section
+            id="calculator"
+            class="calculator-section"
+        >
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-label">
+                        BASIC CALCULATOR
+                    </span>
+
+                    <h2>
+                        Quick Calculation
+                    </h2>
+
+                    <p>
+                        Perform fast and accurate mathematical
+                        calculations. Tap "Scientific" for
+                        advanced functions.
+                    </p>
+
+                </div>
+
+
+                <div class="calculator-card">
+
+                    <!-- Compatibility display -->
+                    <input
+                        type="text"
+                        id="display"
+                        aria-hidden="true"
+                        tabindex="-1"
+                    >
+
+
+                    <div class="calculator-display">
+
+                        <div
+                            id="expression"
+                            class="expression"
+                        >
+                            0
+                        </div>
+
+                        <div
+                            id="result"
+                            class="result"
+                        >
+                            0
+                        </div>
+
+                    </div>
+
+
+                    <div class="calculator-actions">
+
+                        <button
+                            id="copyResult"
+                            type="button"
+                            class="copy-btn"
+                        >
+                            📋 Copy
+                        </button>
+
+                        <button
+                            id="toggleScientific"
+                            type="button"
+                            class="copy-btn"
+                        >
+                            🔬 Scientific
+                        </button>
+
+                    </div>
+
+
+                    <div class="calculator-keypad">
+
+                        <!-- Row 1 -->
+
+                        <button
+                            id="clearCalculator"
+                            type="button"
+                            class="calculator-btn clear"
+                            data-action="clear"
+                        >
+                            AC
+                        </button>
+
+                        <button
+                            id="deleteLast"
+                            type="button"
+                            class="calculator-btn"
+                            data-action="backspace"
+                        >
+                            ⌫
+                        </button>
+
+                        <button
+                            type="button"
+                            class="calculator-btn operator"
+                            data-value="%"
+                        >
+                            %
+                        </button>
+
+                        <button
+                            type="button"
+                            class="calculator-btn operator"
+                            data-value="/"
+                        >
+                            ÷
+                        </button>
+
+
+                        <!-- Row 2 -->
+
+                        <button
+                            type="button"
+                            class="calculator-btn"
+                            data-value="7"
+                        >
+                            7
+                        </button>
+
+                        <button
+                            type="button"
+                            class="calculator-btn"
+                            data-value="8"
+                        >
+                            8
+                        </button>
+
+                        <button
+                            type="button"
+                            class="calculator-btn"
+                            data-value="9"
+                        >
+                            9
+                        </button>
+
+                        <button
+                            type="button"
+                            class="calculator-btn operator"
+                            data-value="*"
+                        >
+                            ×
+                        </button>
+
+
+                        <!-- Row 3 -->
+
+                        <button
+                            type="button"
+                            class="calculator-btn"
+                            data-value="4"
+                        >
+                            4
+                        </button>
+
+                        <button
+                            type="button"
+                            class="calculator-btn"
+                            data-value="5"
+                        >
+                            5
+                        </button>
+
+                        <button
+                            type="button"
+                            class="calculator-btn"
+                            data-value="6"
+                        >
+                            6
+                        </button>
+
+                        <button
+                            type="button"
+                            class="calculator-btn operator"
+                            data-value="-"
+                        >
+                            −
+                        </button>
+
+
+                        <!-- Row 4 -->
+
+                        <button
+                            type="button"
+                            class="calculator-btn"
+                            data-value="1"
+                        >
+                            1
+                        </button>
+
+                        <button
+                            type="button"
+                            class="calculator-btn"
+                            data-value="2"
+                        >
+                            2
+                        </button>
+
+                        <button
+                            type="button"
+                            class="calculator-btn"
+                            data-value="3"
+                        >
+                            3
+                        </button>
+
+                        <button
+                            type="button"
+                            class="calculator-btn operator"
+                            data-value="+"
+                        >
+                            +
+                        </button>
+
+
+                        <!-- Row 5 -->
+
+                        <button
+                            type="button"
+                            class="calculator-btn"
+                            data-value="0"
+                        >
+                            0
+                        </button>
+
+                        <button
+                            type="button"
+                            class="calculator-btn"
+                            data-value="."
+                        >
+                            .
+                        </button>
+
+                        <button
+                            type="button"
+                            class="calculator-btn"
+                            data-value="("
+                        >
+                            (
+                        </button>
+
+                        <button
+                            type="button"
+                            class="calculator-btn"
+                            data-value=")"
+                        >
+                            )
+                        </button>
+
+
+                        <!-- Equal -->
+
+                        <button
+                            id="calculateResult"
+                            type="button"
+                            class="calculator-btn equal"
+                            data-action="calculate"
+                        >
+                            =
+                        </button>
+
+                    </div>
+
+
+                    <!-- SCIENTIFIC KEYPAD (hidden by default) -->
+
+                    <div
+                        id="scientificKeypad"
+                        class="scientific-keypad"
+                        hidden
+                    >
+
+                        <button
+                            type="button"
+                            class="calculator-btn sci-btn"
+                            data-sci="sin("
+                        >
+                            sin
+                        </button>
+
+                        <button
+                            type="button"
+                            class="calculator-btn sci-btn"
+                            data-sci="cos("
+                        >
+                            cos
+                        </button>
+
+                        <button
+                            type="button"
+                            class="calculator-btn sci-btn"
+                            data-sci="tan("
+                        >
+                            tan
+                        </button>
+
+                        <button
+                            id="toggleAngleMode"
+                            type="button"
+                            class="calculator-btn sci-btn mode-btn"
+                            data-sci="toggleMode"
+                        >
+                            DEG
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="calculator-btn sci-btn"
+                            data-sci="log("
+                        >
+                            log
+                        </button>
+
+                        <button
+                            type="button"
+                            class="calculator-btn sci-btn"
+                            data-sci="ln("
+                        >
+                            ln
+                        </button>
+
+                        <button
+                            type="button"
+                            class="calculator-btn sci-btn"
+                            data-sci="sqrt("
+                        >
+                            √
+                        </button>
+
+                        <button
+                            type="button"
+                            class="calculator-btn sci-btn operator"
+                            data-sci="^"
+                        >
+                            ^
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="calculator-btn sci-btn"
+                            data-sci="pi"
+                        >
+                            π
+                        </button>
+
+                        <button
+                            type="button"
+                            class="calculator-btn sci-btn"
+                            data-sci="e"
+                        >
+                            e
+                        </button>
+
+                        <button
+                            type="button"
+                            class="calculator-btn sci-btn"
+                            data-sci="!"
+                        >
+                            n!
+                        </button>
+
+                        <button
+                            type="button"
+                            class="calculator-btn sci-btn"
+                            data-sci="^2"
+                        >
+                            x²
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             TOOLS
+        ====================================== -->
+
+        <section
+            id="tools"
+            class="tools-section"
+        >
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-label">
+                        ALL TOOLS
+                    </span>
+
+                    <h2>
+                        Advanced Calculators
+                    </h2>
+
+                    <p>
+                        Choose a calculator according to
+                        your requirement.
+                    </p>
+
+                </div>
+
+
+                <div class="tools-grid">
+
+
+                    <!-- EMI -->
+
+                    <button
+                        id="openEMI"
+                        type="button"
+                        class="tool-card"
+                    >
+                        <span class="tool-icon">🏦</span>
+
+                        <span class="tool-title">
+                            EMI Calculator
+                        </span>
+
+                        <span class="tool-description">
+                            Calculate monthly loan EMI,
+                            interest and total payment.
+                        </span>
+                    </button>
+
+
+                    <!-- Age -->
+
+                    <button
+                        id="openAge"
+                        type="button"
+                        class="tool-card"
+                    >
+                        <span class="tool-icon">🎂</span>
+
+                        <span class="tool-title">
+                            Age Calculator
+                        </span>
+
+                        <span class="tool-description">
+                            Calculate exact age and
+                            upcoming birthday.
+                        </span>
+                    </button>
+
+
+                    <!-- GST -->
+
+                    <button
+                        id="openGST"
+                        type="button"
+                        class="tool-card"
+                    >
+                        <span class="tool-icon">🧾</span>
+
+                        <span class="tool-title">
+                            GST Calculator
+                        </span>
+
+                        <span class="tool-description">
+                            Add or remove GST and calculate
+                            CGST and SGST.
+                        </span>
+                    </button>
+
+
+                    <!-- BMI -->
+
+                    <button
+                        id="openBMI"
+                        type="button"
+                        class="tool-card"
+                    >
+                        <span class="tool-icon">⚖️</span>
+
+                        <span class="tool-title">
+                            BMI Calculator
+                        </span>
+
+                        <span class="tool-description">
+                            Calculate BMI using weight
+                            and height.
+                        </span>
+                    </button>
+
+
+                    <!-- Currency -->
+
+                    <button
+                        id="openCurrency"
+                        type="button"
+                        class="tool-card"
+                    >
+                        <span class="tool-icon">💱</span>
+
+                        <span class="tool-title">
+                            Currency Converter
+                        </span>
+
+                        <span class="tool-description">
+                            Convert between popular
+                            international currencies.
+                        </span>
+                    </button>
+
+
+                    <!-- Unit -->
+
+                    <button
+                        id="openUnit"
+                        type="button"
+                        class="tool-card"
+                    >
+                        <span class="tool-icon">📏</span>
+
+                        <span class="tool-title">
+                            Unit Converter
+                        </span>
+
+                        <span class="tool-description">
+                            Convert length, weight,
+                            temperature and more.
+                        </span>
+                    </button>
+
+
+                    <!-- Voice -->
+
+                    <button
+                        id="openVoice"
+                        type="button"
+                        class="tool-card"
+                    >
+                        <span class="tool-icon">🎙️</span>
+
+                        <span class="tool-title">
+                            Voice Calculator
+                        </span>
+
+                        <span class="tool-description">
+                            Calculate using your voice.
+                        </span>
+                    </button>
+
+
+                    <!-- History -->
+
+                    <button
+                        type="button"
+                        class="tool-card"
+                        onclick="document.getElementById('history').scrollIntoView({behavior:'smooth'})"
+                    >
+                        <span class="tool-icon">🕘</span>
+
+                        <span class="tool-title">
+                            Calculation History
+                        </span>
+
+                        <span class="tool-description">
+                            View and reuse your previous
+                            calculations.
+                        </span>
+                    </button>
+
+
+                    <!-- Food Cost -->
+
+                    <button
+                        id="openFoodCost"
+                        type="button"
+                        class="tool-card"
+                    >
+                        <span class="tool-icon">🍽️</span>
+
+                        <span class="tool-title">
+                            Food Cost Calculator
+                        </span>
+
+                        <span class="tool-description">
+                            Calculate food cost, profit
+                            and margin.
+                        </span>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             EMI CALCULATOR
+        ====================================== -->
+
+        <section
+            id="emiCalculator"
+            class="calculator-tool-section"
+        >
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-label">
+                        FINANCE
+                    </span>
+
+                    <h2>
+                        EMI Calculator
+                    </h2>
+
+                </div>
+
+
+                <div class="tool-calculator-card">
+
+                    <div class="input-grid">
+
+                        <div class="input-group">
+
+                            <label for="loanAmount">
+                                Loan Amount
+                            </label>
+
+                            <input
+                                type="number"
+                                id="loanAmount"
+                                placeholder="500000"
+                                min="0"
+                            >
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="interestRate">
+                                Interest Rate (%)
+                            </label>
+
+                            <input
+                                type="number"
+                                id="interestRate"
+                                placeholder="8.5"
+                                min="0"
+                                step="0.01"
+                            >
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="loanTenure">
+                                Loan Tenure (Years)
+                            </label>
+
+                            <input
+                                type="number"
+                                id="loanTenure"
+                                placeholder="5"
+                                min="1"
+                                step="1"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        id="calculateEMI"
+                        type="button"
+                        class="primary-btn"
+                    >
+                        Calculate EMI
+                    </button>
+
+
+                    <div class="result-grid">
+
+                        <div class="result-card">
+
+                            <span>
+                                Monthly EMI
+                            </span>
+
+                            <strong id="monthlyEMI">
+                                ₹0
+                            </strong>
+
+                        </div>
+
+
+                        <div class="result-card">
+
+                            <span>
+                                Total Interest
+                            </span>
+
+                            <strong id="totalInterest">
+                                ₹0
+                            </strong>
+
+                        </div>
+
+
+                        <div class="result-card">
+
+                            <span>
+                                Total Payment
+                            </span>
+
+                            <strong id="totalPayment">
+                                ₹0
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             AGE CALCULATOR
+        ====================================== -->
+
+        <section
+            id="ageCalculator"
+            class="calculator-tool-section"
+        >
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-label">
+                        DATE & AGE
+                    </span>
+
+                    <h2>
+                        Age Calculator
+                    </h2>
+
+                </div>
+
+
+                <div class="tool-calculator-card">
+
+                    <div class="input-group">
+
+                        <label for="dateOfBirth">
+                            Date of Birth
+                        </label>
+
+                        <input
+                            type="date"
+                            id="dateOfBirth"
+                        >
+
+                    </div>
+
+
+                    <button
+                        id="calculateAge"
+                        type="button"
+                        class="primary-btn"
+                    >
+                        Calculate Age
+                    </button>
+
+
+                    <div class="result-grid">
+
+                        <div class="result-card">
+
+                            <span>
+                                Your Age
+                            </span>
+
+                            <strong id="ageResult">
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <div class="result-card">
+
+                            <span>
+                                Next Birthday
+                            </span>
+
+                            <strong id="nextBirthday">
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <div class="result-card">
+
+                            <span>
+                                Total Days
+                            </span>
+
+                            <strong id="totalDays">
+                                —
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             GST CALCULATOR
+        ====================================== -->
+
+        <section
+            id="gst"
+            class="calculator-tool-section"
+        >
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-label">
+                        TAX
+                    </span>
+
+                    <h2>
+                        GST Calculator
+                    </h2>
+
+                </div>
+
+
+                <div class="tool-calculator-card">
+
+                    <div class="input-grid">
+
+                        <div class="input-group">
+
+                            <label for="gstAmount">
+                                Amount
+                            </label>
+
+                            <input
+                                type="number"
+                                id="gstAmount"
+                                placeholder="1000"
+                                min="0"
+                            >
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="gstRate">
+                                GST Rate (%)
+                            </label>
+
+                            <input
+                                type="number"
+                                id="gstRate"
+                                placeholder="18"
+                                min="0"
+                                step="0.1"
+                            >
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="gstType">
+                                Calculation
+                            </label>
+
+                            <select id="gstType">
+
+                                <option value="add">
+                                    Add GST
+                                </option>
+
+                                <option value="remove">
+                                    Remove GST
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        id="calculateGST"
+                        type="button"
+                        class="primary-btn"
+                    >
+                        Calculate GST
+                    </button>
+
+
+                    <div class="result-grid">
+
+                        <div class="result-card">
+
+                            <span>
+                                Base Amount
+                            </span>
+
+                            <strong id="gstBase">
+                                ₹0
+                            </strong>
+
+                        </div>
+
+
+                        <div class="result-card">
+
+                            <span>
+                                GST Amount
+                            </span>
+
+                            <strong id="gstAmountResult">
+                                ₹0
+                            </strong>
+
+                        </div>
+
+
+                        <div class="result-card">
+
+                            <span>
+                                CGST
+                            </span>
+
+                            <strong id="cgstAmount">
+                                ₹0
+                            </strong>
+
+                        </div>
+
+
+                        <div class="result-card">
+
+                            <span>
+                                SGST
+                            </span>
+
+                            <strong id="sgstAmount">
+                                ₹0
+                            </strong>
+
+                        </div>
+
+
+                        <div class="result-card">
+
+                            <span>
+                                Final Amount
+                            </span>
+
+                            <strong id="gstFinal">
+                                ₹0
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             BMI CALCULATOR
+        ====================================== -->
+
+        <section
+            id="bmi"
+            class="calculator-tool-section"
+        >
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-label">
+                        HEALTH & FITNESS
+                    </span>
+
+                    <h2>
+                        BMI Calculator
+                    </h2>
+
+                </div>
+
+
+                <div class="tool-calculator-card">
+
+                    <div class="input-grid">
+
+                        <div class="input-group">
+
+                            <label for="bmiWeight">
+                                Weight (kg)
+                            </label>
+
+                            <input
+                                type="number"
+                                id="bmiWeight"
+                                placeholder="70"
+                                min="1"
+                                step="0.1"
+                            >
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="bmiHeight">
+                                Height (cm)
+                            </label>
+
+                            <input
+                                type="number"
+                                id="bmiHeight"
+                                placeholder="175"
+                                min="1"
+                                step="0.1"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        id="calculateBMI"
+                        type="button"
+                        class="primary-btn"
+                    >
+                        Calculate BMI
+                    </button>
+
+
+                    <div class="result-grid">
+
+                        <div class="result-card">
+
+                            <span>
+                                BMI
+                            </span>
+
+                            <strong id="bmiValue">
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <div class="result-card">
+
+                            <span>
+                                Category
+                            </span>
+
+                            <strong id="bmiCategory">
+                                —
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             CURRENCY CONVERTER
+        ====================================== -->
+
+        <section
+            id="currency"
+            class="calculator-tool-section"
+        >
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-label">
+                        MONEY
+                    </span>
+
+                    <h2>
+                        Currency Converter
+                    </h2>
+
+                    <p>
+                        Offline approximate conversion rates.
+                    </p>
+
+                </div>
+
+
+                <div class="tool-calculator-card">
+
+                    <div class="input-grid">
+
+                        <div class="input-group">
+
+                            <label for="currencyAmount">
+                                Amount
+                            </label>
+
+                            <input
+                                type="number"
+                                id="currencyAmount"
+                                placeholder="100"
+                                min="0"
+                                step="0.01"
+                            >
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="currencyFrom">
+                                From
+                            </label>
+
+                            <select id="currencyFrom">
+
+                                <option value="INR">
+                                    INR - Indian Rupee
+                                </option>
+
+                                <option value="USD">
+                                    USD - US Dollar
+                                </option>
+
+                                <option value="EUR">
+                                    EUR - Euro
+                                </option>
+
+                                <option value="GBP">
+                                    GBP - British Pound
+                                </option>
+
+                                <option value="JPY">
+                                    JPY - Japanese Yen
+                                </option>
+
+                                <option value="AED">
+                                    AED - UAE Dirham
+                                </option>
+
+                                <option value="CAD">
+                                    CAD - Canadian Dollar
+                                </option>
+
+                                <option value="AUD">
+                                    AUD - Australian Dollar
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="currencyTo">
+                                To
+                            </label>
+
+                            <select id="currencyTo">
+
+                                <option value="USD">
+                                    USD - US Dollar
+                                </option>
+
+                                <option value="INR">
+                                    INR - Indian Rupee
+                                </option>
+
+                                <option value="EUR">
+                                    EUR - Euro
+                                </option>
+
+                                <option value="GBP">
+                                    GBP - British Pound
+                                </option>
+
+                                <option value="JPY">
+                                    JPY - Japanese Yen
+                                </option>
+
+                                <option value="AED">
+                                    AED - UAE Dirham
+                                </option>
+
+                                <option value="CAD">
+                                    CAD - Canadian Dollar
+                                </option>
+
+                                <option value="AUD">
+                                    AUD - Australian Dollar
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="button-row">
+
+                        <button
+                            id="swapCurrencies"
+                            type="button"
+                            class="secondary-btn"
+                        >
+                            ⇄ Swap
+                        </button>
+
+                        <button
+                            id="convertCurrency"
+                            type="button"
+                            class="primary-btn"
+                        >
+                            Convert
+                        </button>
+
+                    </div>
+
+
+                    <div class="result-grid">
+
+                        <div class="result-card">
+
+                            <span>
+                                Converted Amount
+                            </span>
+
+                            <strong id="currencyResult">
+                                0
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <p
+                        id="currencyResultText"
+                        class="result-text"
+                    >
+                        Enter an amount to convert.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             UNIT CONVERTER
+        ====================================== -->
+
+        <section
+            id="unit"
+            class="calculator-tool-section"
+        >
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-label">
+                        CONVERSION
+                    </span>
+
+                    <h2>
+                        Unit Converter
+                    </h2>
+
+                </div>
+
+
+                <div class="tool-calculator-card">
+
+                    <div class="input-grid">
+
+                        <div class="input-group">
+
+                            <label for="unitCategory">
+                                Category
+                            </label>
+
+                            <select id="unitCategory">
+
+                                <option value="length">
+                                    Length
+                                </option>
+
+                                <option value="weight">
+                                    Weight
+                                </option>
+
+                                <option value="temperature">
+                                    Temperature
+                                </option>
+
+                                <option value="area">
+                                    Area
+                                </option>
+
+                                <option value="volume">
+                                    Volume
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="unitValue">
+                                Value
+                            </label>
+
+                            <input
+                                type="number"
+                                id="unitValue"
+                                placeholder="10"
+                                step="any"
+                            >
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="unitFrom">
+                                From
+                            </label>
+
+                            <select id="unitFrom">
+                            </select>
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="unitTo">
+                                To
+                            </label>
+
+                            <select id="unitTo">
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        id="convertUnits"
+                        type="button"
+                        class="primary-btn"
+                    >
+                        Convert Unit
+                    </button>
+
+
+                    <div class="result-grid">
+
+                        <div class="result-card">
+
+                            <span>
+                                Result
+                            </span>
+
+                            <strong id="unitResult">
+                                0
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             VOICE CALCULATOR
+        ====================================== -->
+
+        <section
+            id="voice"
+            class="calculator-tool-section"
+        >
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-label">
+                        VOICE AI
+                    </span>
+
+                    <h2>
+                        Voice Calculator
+                    </h2>
+
+                    <p>
+                        Speak a simple calculation such as
+                        "25 plus 50".
+                    </p>
+
+                </div>
+
+
+                <div class="tool-calculator-card voice-card">
+
+                    <button
+                        id="startVoiceCalculator"
+                        type="button"
+                        class="voice-btn"
+                    >
+                        🎙️ Start Voice Calculator
+                    </button>
+
+
+                    <div class="voice-status">
+
+                        <span>
+                            Status:
+                        </span>
+
+                        <strong id="voiceStatus">
+                            Ready
+                        </strong>
+
+                    </div>
+
+
+                    <div class="voice-result-box">
+
+                        <p>
+                            You said:
+                        </p>
+
+                        <strong id="voiceText">
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div class="voice-result-box">
+
+                        <p>
+                            Result:
+                        </p>
+
+                        <strong id="voiceResult">
+                            —
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             HISTORY
+        ====================================== -->
+
+        <section
+            id="history"
+            class="calculator-tool-section"
+        >
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-label">
+                        HISTORY
+                    </span>
+
+                    <h2>
+                        Calculation History
+                    </h2>
+
+                </div>
+
+
+                <div class="history-card">
+
+                    <div class="history-header">
+
+                        <h3>
+                            Recent Calculations
+                        </h3>
+
+                        <button
+                            id="clearHistory"
+                            type="button"
+                            class="danger-btn"
+                        >
+                            Clear All
+                        </button>
+
+                    </div>
+
+
+                    <div
+                        id="historyEmpty"
+                        class="history-empty"
+                    >
+                        No calculations yet.
+                    </div>
+
+
+                    <div
+                        id="historyList"
+                        class="history-list"
+                    >
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             FOOD COST CALCULATOR
+        ====================================== -->
+
+        <section
+            id="food-cost"
+            class="calculator-tool-section"
+        >
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-label">
+                        FOOD BUSINESS
+                    </span>
+
+                    <h2>
+                        Food Cost Calculator
+                    </h2>
+
+                    <p>
+                        Calculate total food cost, profit
+                        and profit margin.
+                    </p>
+
+                </div>
+
+
+                <div class="tool-calculator-card">
+
+                    <div class="input-grid">
+
+                        <div class="input-group">
+
+                            <label for="ingredientCost">
+                                Ingredient Cost
+                            </label>
+
+                            <input
+                                type="number"
+                                id="ingredientCost"
+                                placeholder="100"
+                                min="0"
+                                step="0.01"
+                            >
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="laborCost">
+                                Labor Cost
+                            </label>
+
+                            <input
+                                type="number"
+                                id="laborCost"
+                                placeholder="30"
+                                min="0"
+                                step="0.01"
+                            >
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="otherCost">
+                                Other Cost
+                            </label>
+
+                            <input
+                                type="number"
+                                id="otherCost"
+                                placeholder="20"
+                                min="0"
+                                step="0.01"
+                            >
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="sellingPrice">
+                                Selling Price
+                            </label>
+
+                            <input
+                                type="number"
+                                id="sellingPrice"
+                                placeholder="250"
+                                min="0"
+                                step="0.01"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        id="calculateFoodCost"
+                        type="button"
+                        class="primary-btn"
+                    >
+                        Calculate Food Cost
+                    </button>
+
+
+                    <div class="result-grid">
+
+                        <div class="result-card">
+
+                            <span>
+                                Total Food Cost
+                            </span>
+
+                            <strong id="totalFoodCost">
+                                ₹0
+                            </strong>
+
+                        </div>
+
+
+                        <div class="result-card">
+
+                            <span>
+                                Profit
+                            </span>
+
+                            <strong id="foodProfit">
+                                ₹0
+                            </strong>
+
+                        </div>
+
+
+                        <div class="result-card">
+
+                            <span>
+                                Food Cost %
+                            </span>
+
+                            <strong id="foodCostPercentage">
+                                0%
+                            </strong>
+
+                        </div>
+
+
+                        <div class="result-card">
+
+                            <span>
+                                Profit Margin
+                            </span>
+
+                            <strong id="profitMargin">
+                                0%
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <p>
+                © 2026 NeonCalc Pro.
+                All Rights Reserved.
+            </p>
+
+            <p>
+                Built with HTML, CSS & JavaScript.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
+    <script src="js/app.js"></script>
+
+</body>
+</html>
